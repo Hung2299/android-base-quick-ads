@@ -64,8 +64,8 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
         connectivityManager =
             getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
         val navHostFragment =
-            supportFragmentManager.findFragmentById(R.id.nav_host_main_fragment) as NavHostFragment
-        navController = navHostFragment.navController
+            supportFragmentManager.findFragmentById(R.id.nav_host_main_fragment) as NavHostFragment?
+        navController = navHostFragment?.navController
         listenForNetworkState()
         checkNetworkState()
         requestPermissionAndroid13()

@@ -2,6 +2,7 @@ package com.harison.core.app.api
 
 import android.content.Context
 import android.util.Log
+import dagger.hilt.android.qualifiers.ApplicationContext
 import java.io.File
 import java.io.FileOutputStream
 import java.io.IOException
@@ -13,28 +14,44 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import okhttp3.ResponseBody
 import retrofit2.Response
+import timber.log.Timber
 
 @Singleton
 class FileDownloader @Inject constructor(
-    @Named("App context") private val context: Context,
+    @ApplicationContext private val context: Context,
     private val apiService: ApiService
 ) {
+    private val outputFolder = File(context.filesDir, "downloads")
+
+    /**
+     * Function to download file using retrofit.
+     * Output folder is data/downloads
+     * @return absolutePath of File. It will return file storage in dataApp if it has been downloaded
+     * */
     suspend fun downloadFile(
         fileUrl: String,
-        onStart: () -> Unit,
-        onSuccess: () -> Unit,
-        onError: (String) -> Unit
+        onStart: () -> Unit = {},
+        onSuccess: (String) -> Unit = {},
+        onError: (String) -> Unit = {}
     ) {
         try {
-            val response: Response<ResponseBody> = apiService.downloadFile(fileUrl)
             onStart()
+            val fileName = fileUrl.substring(fileUrl.lastIndexOf('/') + 1)
+            val outputFile = File(outputFolder, fileName)
+            if (File(outputFolder, fileName).exists()) {
+                onSuccess(outputFile.absolutePath)
+                Timber.tag("----Return file in storage:").d(outputFile.absolutePath)
+                return
+            }
+            val response: Response<ResponseBody> = apiService.downloadFile(fileUrl)
             if (response.isSuccessful) {
                 val responseBody = response.body()
-                val fileName = fileUrl.substring(fileUrl.lastIndexOf('/') + 1)
-                Log.e("----", "file name: $fileName")
+                Timber.tag("----").d("file name: %s", fileName)
                 if (responseBody != null) {
-                    saveFile(responseBody.byteStream(), fileName)
-                    onSuccess()
+                    saveFile(responseBody.byteStream(), fileName) {
+                        onSuccess(it)
+                        Timber.tag("----Save file success:").e(it)
+                    }
                 } else {
                     onError("Response body is empty.")
                 }
@@ -46,10 +63,13 @@ class FileDownloader @Inject constructor(
         }
     }
 
-    private suspend fun saveFile(inputStream: InputStream, fileName: String) {
+    private suspend fun saveFile(
+        inputStream: InputStream,
+        fileName: String,
+        saveDone: (String) -> Unit = {}
+    ) {
         withContext(Dispatchers.IO) {
-            val outputFolder = File(context.filesDir, "downloads")
-            Log.e("----", "output folder: ${outputFolder.absolutePath}")
+            Timber.tag("----").d("output folder: %s", outputFolder.absolutePath)
             if (!outputFolder.exists()) {
                 outputFolder.mkdirs()
             }
@@ -62,6 +82,7 @@ class FileDownloader @Inject constructor(
                     outputStream.write(buffer, 0, bytesRead)
                 }
                 outputStream.close()
+                saveDone.invoke(outputFile.absolutePath)
             } catch (e: IOException) {
                 e.printStackTrace()
             }

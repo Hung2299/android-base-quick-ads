@@ -10,12 +10,21 @@ import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
+import com.ads.control.admob.AppOpenManager
 import com.ads.control.ads.AperoAd
 import com.ads.control.ads.wrapper.ApNativeAd
 import com.facebook.shimmer.ShimmerFrameLayout
+import com.harison.core.app.utils.BasePrefers
 import timber.log.Timber
 
 abstract class BaseFragment<T : ViewDataBinding> : Fragment() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        if (BasePrefers.getPrefsInstance().openResume) {
+            AppOpenManager.getInstance().enableAppResume()
+        }
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,

@@ -2,6 +2,7 @@ package com.harison.core.app.ui.splash.ui
 
 import android.content.Context
 import android.os.BatteryManager
+import android.view.View
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.ads.control.admob.AppOpenManager

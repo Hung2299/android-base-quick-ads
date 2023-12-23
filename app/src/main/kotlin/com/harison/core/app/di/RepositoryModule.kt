@@ -1,7 +1,7 @@
 package com.harison.core.app.di
 
 import com.harison.core.app.repository.Repository
-import com.harison.core.app.api.repository.RepositoryImpl
+import com.harison.core.app.repository.RepositoryImpl
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
