@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="back_pressed_finish">Пожалуйста, нажмите снова, чтобы уйти</string>
+    <string name="setting_language">Языки</string>
+    <string name="setting_policy">политика конфиденциальности</string>
+    <string name="setting_en">Английский</string>
+    <string name="setting_vi">вьетнамский</string>
+    <string name="setting_it">Итальянский</string>
+    <string name="setting_spain">испанский</string>
+    <string name="setting_hindi">хинди</string>
+    <string name="terms_of_use">Условия эксплуатации</string>
+    <string name="setting">Настройки</string>
+    <string name="language">Язык</string>
+    <string name="version">Версия</string>
+    <string name="rate_application">Оценка приложения</string>
+    <string name="share">Поделиться приложением</string>
+    <string name="loading_ads">Загрузка рекламы …</string>
+    <string name="title_rate">Вам нравится приложение?</string>
+    <string name="desc_rate">Дайте нам знать, что ваш опыт \ n 5 звезд - лучший в Google Play!</string>
+    <string name="rate_us">Оцените нас</string>
+    <string name="your_friend">\"Ваш друг \"</string>
+    <string name="visit_app">\ "хочет, чтобы вы проверили наше приложение !. Посетите нас по адресу: \"</string>
+    <string name="choose_way_share">Выберите способ поделиться:</string>
+    <string name="feedback">Обратная связь</string>
+    <string name="settings">Настройки</string>
+    <string name="history">История</string>
+    <string name="setting_pt">португальский</string>
+    <string name="setting_de">Немецкий</string>
+    <string name="setting_fr">Французский</string>
+
+    <string name="setting_china">Китай</string>
+    <string name="setting_russian">Русский</string>
+    <string name="setting_bengal">Бенгалия</string>
+    <string name="setting_japan">Япония</string>
+    <string name="setting_marathi">Маратхи</string>
+    <string name="setting_telugu">телугу</string>
+    <string name="setting_turkish">турецкий</string>
+    <string name="setting_tamil">Тамильский</string>
+    <string name="setting_korea">Корея</string>
+    <string name="setting_italian">Итальянский</string>
+    <string name="setting_thailand">Таиланд</string>
+
+    <string name="no_internet_description">Есть ошибка подключения, пожалуйста, проверьте \ nyour Internet и попробуйте еще раз</string>
+    <string name="connect">Соединять</string>
+    <string name="get_start">НАЧАТЬ</string>
+    <string name="next">СЛЕДУЮЩИЙ</string>
+</resources>

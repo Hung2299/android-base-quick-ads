@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="back_pressed_finish">कृपया छोड़ने के लिए फिर से वापस दबाएं</string>
+    <string name="setting_language">बोली</string>
+    <string name="setting_policy">गोपनीयता नीति</string>
+    <string name="setting_en">अंग्रेज़ी</string>
+    <string name="setting_vi">वियतनामी</string>
+    <string name="setting_it">इतालवी</string>
+    <string name="setting_spain">स्पैनिश</string>
+    <string name="setting_hindi">हिंदी</string>
+    <string name="terms_of_use">उपयोग की शर्तें</string>
+    <string name="setting">समायोजन</string>
+    <string name="language">भाषा</string>
+    <string name="version">संस्करण</string>
+    <string name="rate_application">एप्प का मूल्यांकन</string>
+    <string name="share">ऐप शेयर करें</string>
+    <string name="loading_ads">लोडिंग विज्ञापन…</string>
+    <string name="title_rate">क्या आपको ऐप पसंद है?</string>
+    <string name="desc_rate">आइए जानते हैं कि आपका अनुभव \ n 5 स्टार Google Play पर सबसे अच्छा है!</string>
+    <string name="rate_us">हमें रेटिंग दें</string>
+    <string name="your_friend">\"आपके दोस्त \"</string>
+    <string name="visit_app">\ "आप चाहते हैं कि आप हमारे ऐप की जांच करें!</string>
+    <string name="choose_way_share">साझा करने का एक तरीका चुनें:</string>
+    <string name="feedback">प्रतिक्रिया</string>
+    <string name="settings">समायोजन</string>
+    <string name="history">इतिहास</string>
+    <string name="setting_pt">पुर्तगाली</string>
+    <string name="setting_de">जर्मन</string>
+    <string name="setting_fr">फ्रांसीसी</string>
+
+    <string name="setting_china">चीन</string>
+    <string name="setting_russian">रूसी</string>
+    <string name="setting_bengal">बंगाल</string>
+    <string name="setting_japan">जापान</string>
+    <string name="setting_marathi">मराठी</string>
+    <string name="setting_telugu">तेलुगू</string>
+    <string name="setting_turkish">तुर्की</string>
+    <string name="setting_tamil">तामिल</string>
+    <string name="setting_korea">कोरिया</string>
+    <string name="setting_italian">इतालवी</string>
+    <string name="setting_thailand">थाईलैंड</string>
+
+    <string name="no_internet_description">एक कनेक्शन त्रुटि है, कृपया \ nyour इंटरनेट की जाँच करें और पुनः प्रयास करें</string>
+    <string name="connect">जोड़ना</string>
+    <string name="get_start">शुरू करो</string>
+    <string name="next">अगला</string>
+</resources>

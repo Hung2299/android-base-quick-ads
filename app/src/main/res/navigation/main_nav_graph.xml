@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/splashNavFragment">
+
+    <fragment
+        android:id="@+id/splashNavFragment"
+        android:name="com.harison.core.app.ui.splash.ui.SplashNavFragment"
+        android:label="SplashFragment"
+        tools:layout="@layout/fragment_splash_nav" />
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.harison.core.app.ui.main.ui.home.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/languageFragment"
+        android:name="com.harison.core.app.ui.main.ui.setting.language.LanguageFragment"
+        android:label="LanguageFragment"
+        tools:layout="@layout/fragment_language" />
+
+    <fragment
+        android:id="@+id/noInternetFragment"
+        android:name="com.harison.core.app.ui.main.ui.no_internet.NoInternetFragment"
+        android:label="NoInternetFragment" />
+
+    <action
+        android:id="@+id/noInternet"
+        app:destination="@id/noInternetFragment" />
+
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.harison.core.app.ui.main.ui.setting.SettingFragment"
+        android:label="SettingFragment" />
+
+    <fragment
+        android:id="@+id/firstLanguageFragment"
+        android:name="com.harison.core.app.ui.splash.ui.first_language.FirstLanguageFragment"
+        android:label="FirstLanguageFragment"
+        tools:layout="@layout/fragment_first_language" />
+
+    <fragment
+        android:id="@+id/onboardingFragment"
+        android:name="com.harison.core.app.ui.splash.ui.onboarding.OnboardingFragment"
+        android:label="OnboardingFragment"
+        tools:layout="@layout/fragment_onboarding" />
+
+</navigation>

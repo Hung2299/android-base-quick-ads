@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="back_pressed_finish">வெளியேற மீண்டும் அழுத்தவும்</string>
+    <string name="setting_language">மொழிகள்</string>
+    <string name="setting_policy">தனியுரிமைக் கொள்கை</string>
+    <string name="setting_en">ஆங்கிலம்</string>
+    <string name="setting_vi">வியட்நாமிய</string>
+    <string name="setting_it">இத்தாலிய</string>
+    <string name="setting_spain">ஸ்பானிஷ்</string>
+    <string name="setting_hindi">இந்தி</string>
+    <string name="terms_of_use">பயன்பாட்டு விதிமுறைகளை</string>
+    <string name="setting">அமைப்புகள்</string>
+    <string name="language">மொழி</string>
+    <string name="version">பதிப்பு</string>
+    <string name="rate_application">விகித பயன்பாடு</string>
+    <string name="share">பயன்பாட்டைப் பகிரவும்</string>
+    <string name="loading_ads">விளம்பரங்களை ஏற்றுகிறது…</string>
+    <string name="title_rate">உங்களுக்கு பயன்பாடு பிடிக்குமா?</string>
+    <string name="desc_rate">உங்கள் அனுபவத்தை எங்களுக்குத் தெரியப்படுத்துங்கள் \ n 5 நட்சத்திரங்கள் கூகிள் பிளேயில் சிறந்தவை!</string>
+    <string name="rate_us">எங்களை மதிப்பிடு</string>
+    <string name="your_friend">\"உங்கள் நண்பர் \"</string>
+    <string name="visit_app">\ "நீங்கள் எங்கள் பயன்பாட்டைப் பார்க்க வேண்டும் என்று விரும்புகிறீர்கள் !. எங்களை பார்வையிடவும்: \"</string>
+    <string name="choose_way_share">பகிர ஒரு வழியைத் தேர்வுசெய்க:</string>
+    <string name="feedback">பின்னூட்டம்</string>
+    <string name="settings">அமைப்புகள்</string>
+    <string name="history">வரலாறு</string>
+    <string name="setting_pt">போர்த்துகீசியம்</string>
+    <string name="setting_de">ஜெர்மன்</string>
+    <string name="setting_fr">பிரஞ்சு</string>
+
+    <string name="setting_china">சீனா</string>
+    <string name="setting_russian">ரஷ்ய</string>
+    <string name="setting_bengal">வங்காளம்</string>
+    <string name="setting_japan">ஜப்பான்</string>
+    <string name="setting_marathi">மராத்தி</string>
+    <string name="setting_telugu">தெலுங்கு</string>
+    <string name="setting_turkish">துருக்கிய</string>
+    <string name="setting_tamil">தமிழ்</string>
+    <string name="setting_korea">கொரியா</string>
+    <string name="setting_italian">இத்தாலிய</string>
+    <string name="setting_thailand">தாய்லாந்து</string>
+
+    <string name="no_internet_description">இணைப்பு பிழை உள்ளது, தயவுசெய்து \ nyour இணையத்தை சரிபார்த்து மீண்டும் முயற்சிக்கவும்</string>
+    <string name="connect">இணைக்கவும்</string>
+    <string name="get_start">தொடக்கத்தைப் பெறுங்கள்</string>
+    <string name="next">அடுத்தது</string>
+</resources>

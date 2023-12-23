@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="back_pressed_finish">กรุณากดกลับอีกครั้งเพื่อเลิก</string>
+    <string name="setting_language">ภาษา</string>
+    <string name="setting_policy">นโยบายความเป็นส่วนตัว</string>
+    <string name="setting_en">ภาษาอังกฤษ</string>
+    <string name="setting_vi">เวียดนาม</string>
+    <string name="setting_it">ภาษาอิตาลี</string>
+    <string name="setting_spain">ภาษาสเปน</string>
+    <string name="setting_hindi">ภาษาฮินดี</string>
+    <string name="terms_of_use">ข้อกำหนดการใช้งาน</string>
+    <string name="setting">การตั้งค่า</string>
+    <string name="language">ภาษา</string>
+    <string name="version">รุ่น</string>
+    <string name="rate_application">ให้คะแนนแอพ</string>
+    <string name="share">แชร์แอพ</string>
+    <string name="loading_ads">กำลังโหลดโฆษณา ...</string>
+    <string name="title_rate">คุณชอบแอพไหม?</string>
+    <string name="desc_rate">แจ้งให้เราทราบประสบการณ์ของคุณ \ n 5 ดาวเป็นสิ่งที่ดีที่สุดใน Google Play!</string>
+    <string name="rate_us">ให้คะแนนเรา</string>
+    <string name="your_friend">\"เพื่อนของคุณ \"</string>
+    <string name="visit_app">\ "ต้องการให้คุณตรวจสอบแอปของเรา! เยี่ยมชมเราได้ที่: \"</string>
+    <string name="choose_way_share">เลือกวิธีแบ่งปัน:</string>
+    <string name="feedback">ข้อเสนอแนะ</string>
+    <string name="settings">การตั้งค่า</string>
+    <string name="history">ประวัติศาสตร์</string>
+    <string name="setting_pt">ชาวโปรตุเกส</string>
+    <string name="setting_de">ชาวเยอรมัน</string>
+    <string name="setting_fr">ภาษาฝรั่งเศส</string>
+
+    <string name="setting_china">จีน</string>
+    <string name="setting_russian">ชาวรัสเซีย</string>
+    <string name="setting_bengal">เบงกอล</string>
+    <string name="setting_japan">ประเทศญี่ปุ่น</string>
+    <string name="setting_marathi">มาราธี</string>
+    <string name="setting_telugu">เตลูกู</string>
+    <string name="setting_turkish">ตุรกี</string>
+    <string name="setting_tamil">ทมิฬ</string>
+    <string name="setting_korea">เกาหลี</string>
+    <string name="setting_italian">ภาษาอิตาลี</string>
+    <string name="setting_thailand">ประเทศไทย</string>
+
+    <string name="no_internet_description">มีข้อผิดพลาดในการเชื่อมต่อโปรดตรวจสอบ \ nyour internet และลองอีกครั้ง</string>
+    <string name="connect">เชื่อมต่อ</string>
+    <string name="get_start">เริ่มต้น</string>
+    <string name="next">ต่อไป</string>
+</resources>

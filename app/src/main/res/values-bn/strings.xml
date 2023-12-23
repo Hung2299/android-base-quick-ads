@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="back_pressed_finish">প্রস্থান করতে আবার টিপুন দয়া করে</string>
+    <string name="setting_language">ভাষা</string>
+    <string name="setting_policy">গোপনীয়তা নীতি</string>
+    <string name="setting_en">ইংরেজি</string>
+    <string name="setting_vi">ভিয়েতনামী</string>
+    <string name="setting_it">ইতালিয়ান</string>
+    <string name="setting_spain">স্পেনীয়</string>
+    <string name="setting_hindi">হিন্দি</string>
+    <string name="terms_of_use">ব্যবহারের শর্তাবলী</string>
+    <string name="setting">সেটিংস</string>
+    <string name="language">ভাষা</string>
+    <string name="version">সংস্করণ</string>
+    <string name="rate_application">হার অ্যাপ্লিকেশন</string>
+    <string name="share">অ্যাপ্লিকেশন ভাগ করা</string>
+    <string name="loading_ads">বিজ্ঞাপন লোড করা…</string>
+    <string name="title_rate">আপনি অ্যাপটি পছন্দ করেন?</string>
+    <string name="desc_rate">আমাদের আপনার অভিজ্ঞতাটি জানতে দিন \ n 5 তারা গুগল প্লেতে সেরা!</string>
+    <string name="rate_us">আমাদের ব্যাপারে আপনার মতামত দিন</string>
+    <string name="your_friend">\"তোমার বন্ধু \"</string>
+    <string name="visit_app">। "আপনি আমাদের অ্যাপ্লিকেশনটি পরীক্ষা করে দেখতে চান! আমাদের এখানে দেখুন: \"</string>
+    <string name="choose_way_share">ভাগ করার একটি উপায় চয়ন করুন:</string>
+    <string name="feedback">প্রতিক্রিয়া</string>
+    <string name="settings">সেটিংস</string>
+    <string name="history">ইতিহাস</string>
+    <string name="setting_pt">পর্তুগীজ</string>
+    <string name="setting_de">জার্মান</string>
+    <string name="setting_fr">ফরাসি</string>
+
+    <string name="setting_china">চীন</string>
+    <string name="setting_russian">রাশিয়ান</string>
+    <string name="setting_bengal">বাংলা</string>
+    <string name="setting_japan">জাপান</string>
+    <string name="setting_marathi">মারাঠি</string>
+    <string name="setting_telugu">তেলুগু</string>
+    <string name="setting_turkish">তুর্কি</string>
+    <string name="setting_tamil">তামিল</string>
+    <string name="setting_korea">কোরিয়া</string>
+    <string name="setting_italian">ইতালিয়ান</string>
+    <string name="setting_thailand">থাইল্যান্ড</string>
+
+    <string name="no_internet_description">একটি সংযোগ ত্রুটি আছে, দয়া করে আপনার ইন্টারনেট পরীক্ষা করুন এবং আবার চেষ্টা করুন</string>
+    <string name="connect">সংযুক্ত</string>
+    <string name="get_start">শুরু করা</string>
+    <string name="next">পরবর্তী</string>
+</resources>

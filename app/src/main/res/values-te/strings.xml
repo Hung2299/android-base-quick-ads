@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="back_pressed_finish">నిష్క్రమించడానికి మళ్ళీ తిరిగి నొక్కండి</string>
+    <string name="setting_language">భాషలు</string>
+    <string name="setting_policy">గోప్యతా విధానం</string>
+    <string name="setting_en">ఆంగ్ల</string>
+    <string name="setting_vi">వియత్నామీస్</string>
+    <string name="setting_it">ఇటాలియన్</string>
+    <string name="setting_spain">స్పానిష్</string>
+    <string name="setting_hindi">హిందీ</string>
+    <string name="terms_of_use">ఉపయోగ నిబంధనలు</string>
+    <string name="setting">సెట్టింగులు</string>
+    <string name="language">భాష</string>
+    <string name="version">సంస్కరణ: Telugu</string>
+    <string name="rate_application">రేటు అనువర్తనం</string>
+    <string name="share">అనువర్తనం షేర్</string>
+    <string name="loading_ads">ప్రకటనలను లోడ్ చేస్తోంది…</string>
+    <string name="title_rate">మీకు అనువర్తనం నచ్చిందా?</string>
+    <string name="desc_rate">మీ అనుభవాన్ని మాకు తెలియజేయండి \ n 5 నక్షత్రాలు గూగుల్ ప్లేలో ఉత్తమమైనవి!</string>
+    <string name="rate_us">మమ్మల్ని రేట్ చేయండి</string>
+    <string name="your_friend">\"నీ స్నేహితుడు \"</string>
+    <string name="visit_app">\ "మీరు మా అనువర్తనాన్ని చూడాలని కోరుకుంటారు!. మమ్మల్ని సందర్శించండి: \"</string>
+    <string name="choose_way_share">భాగస్వామ్యం చేయడానికి ఒక మార్గాన్ని ఎంచుకోండి:</string>
+    <string name="feedback">అభిప్రాయం</string>
+    <string name="settings">సెట్టింగులు</string>
+    <string name="history">చరిత్ర</string>
+    <string name="setting_pt">పోర్చుగీస్</string>
+    <string name="setting_de">జర్మన్</string>
+    <string name="setting_fr">ఫ్రెంచ్</string>
+
+    <string name="setting_china">చైనా</string>
+    <string name="setting_russian">రష్యన్</string>
+    <string name="setting_bengal">బెంగాల్</string>
+    <string name="setting_japan">జపాన్</string>
+    <string name="setting_marathi">మరాఠీ</string>
+    <string name="setting_telugu">తెలుగు</string>
+    <string name="setting_turkish">టర్కిష్</string>
+    <string name="setting_tamil">తమిళ</string>
+    <string name="setting_korea">కొరియా</string>
+    <string name="setting_italian">ఇటాలియన్</string>
+    <string name="setting_thailand">థాయిలాండ్</string>
+
+    <string name="no_internet_description">కనెక్షన్ లోపం ఉంది, దయచేసి \ nyour ఇంటర్నెట్‌ను తనిఖీ చేసి, మళ్లీ ప్రయత్నించండి</string>
+    <string name="connect">కనెక్ట్</string>
+    <string name="get_start">ప్రారంభించండి</string>
+    <string name="next">తరువాత</string>
+
+</resources>

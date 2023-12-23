@@ -1,0 +1,46 @@
+<resources>
+    <string name="back_pressed_finish">Bitte drücken Sie erneut zurück, um aufzuhören</string>
+    <string name="setting_language">Sprachen</string>
+    <string name="setting_policy">Datenschutz-Bestimmungen</string>
+    <string name="setting_en">Englisch</string>
+    <string name="setting_vi">Vietnamesisch</string>
+    <string name="setting_it">Italienisch</string>
+    <string name="setting_spain">Spanisch</string>
+    <string name="setting_hindi">Hindi</string>
+    <string name="terms_of_use">Nutzungsbedingungen</string>
+    <string name="setting">Einstellungen</string>
+    <string name="language">Sprache</string>
+    <string name="version">Ausführung</string>
+    <string name="rate_application">Bewertungs App</string>
+    <string name="share">App teilen</string>
+    <string name="loading_ads">Anzeigen laden…</string>
+    <string name="title_rate">Magst du die App?</string>
+    <string name="desc_rate">Lassen Sie uns wissen, dass Ihre Erfahrung \ n 5 Sterne bei Google Play am besten ist!</string>
+    <string name="rate_us">Bewerten Sie uns</string>
+    <string name="your_friend">\"Dein Freund \"</string>
+    <string name="visit_app">\ "möchte, dass Sie unsere App überprüfen! Besuchen Sie uns unter: \"</string>
+    <string name="choose_way_share">Wählen Sie einen Weg zum Teilen:</string>
+    <string name="feedback">Rückmeldung</string>
+    <string name="settings">Einstellungen</string>
+    <string name="history">Geschichte</string>
+    <string name="setting_pt">Portugiesisch</string>
+    <string name="setting_de">Deutsch</string>
+    <string name="setting_fr">Französisch</string>
+
+    <string name="setting_china">China</string>
+    <string name="setting_russian">Russisch</string>
+    <string name="setting_bengal">Bengalen</string>
+    <string name="setting_japan">Japan</string>
+    <string name="setting_marathi">Marathi</string>
+    <string name="setting_telugu">Telugu</string>
+    <string name="setting_turkish">Türkisch</string>
+    <string name="setting_tamil">Tamil</string>
+    <string name="setting_korea">Korea</string>
+    <string name="setting_italian">Italienisch</string>
+    <string name="setting_thailand">Thailand</string>
+
+    <string name="no_internet_description">Es gibt einen Verbindungsfehler. Überprüfen Sie bitte das Internet und versuchen Sie es erneut</string>
+    <string name="connect">Verbinden</string>
+    <string name="get_start">Starten Sie an</string>
+    <string name="next">NÄCHSTE</string>
+</resources>

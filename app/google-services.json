@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "66789768568",
+    "project_id": "bk-plus-base-project",
+    "storage_bucket": "bk-plus-base-project.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:66789768568:android:afce44cc9ff2c5cb155c8d",
+        "android_client_info": {
+          "package_name": "com.base.bkplus.wifi.password"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDR7HVQIs2aVg8u7CpTY8BbTXlJPpfyBO8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

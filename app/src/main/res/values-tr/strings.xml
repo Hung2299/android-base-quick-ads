@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    #VALUE!
+    <string name="back_pressed_finish">Bırakmak için lütfen tekrar tekrar basın</string>
+    <string name="setting_language">Diller</string>
+    <string name="setting_policy">Gizlilik Politikası</string>
+    <string name="setting_en">İngilizce</string>
+    <string name="setting_vi">Vietnam</string>
+    <string name="setting_it">İtalyan</string>
+    <string name="setting_spain">İspanyol</string>
+    <string name="setting_hindi">Hintçe</string>
+
+    <string name="setting_china">Çin</string>
+    <string name="setting_russian">Rusça</string>
+    <string name="setting_bengal">Bengal</string>
+    <string name="setting_japan">Japonya</string>
+    <string name="setting_marathi">Marathi</string>
+    <string name="setting_telugu">Telugu</string>
+    <string name="setting_turkish">Türkçe</string>
+    <string name="setting_tamil">Tamil</string>
+    <string name="setting_korea">Kore</string>
+    <string name="setting_italian">İtalyan</string>
+    <string name="setting_thailand">Tayland</string>
+
+    <string name="terms_of_use">Kullanım Şartları</string>
+    <string name="setting">Ayarlar</string>
+    <string name="language">Dil</string>
+    <string name="version">Versiyon</string>
+    <string name="rate_application">Ücretli Uygulama</string>
+    <string name="share">Uygulamayı Paylaş</string>
+    <string name="loading_ads">Yükleme reklamları…</string>
+    <string name="title_rate">Uygulamayı beğendin mi?</string>
+    <string name="desc_rate">Deneyiminizi bize bildirin 5 yıldız Google Play\'de en iyisidir!</string>
+    <string name="rate_us">Bizi değerlendirin</string>
+    <string name="your_friend">\"Senin arkadaşın \"</string>
+    <string name="visit_app">\ "Uygulamamıza göz atmanızı istiyor!. Bizi ziyaret edin: \"</string>
+    <string name="choose_way_share">Paylaşmanın bir yolunu seçin:</string>
+    <string name="feedback">Geri bildirim</string>
+    <string name="settings">Ayarlar</string>
+    <string name="history">Tarih</string>
+    <string name="setting_pt">Portekizce</string>
+    <string name="setting_de">Almanca</string>
+    <string name="setting_fr">Fransızca</string>
+    <string name="no_internet_description">Bir bağlantı hatası var, lütfen internette kontrol edin ve tekrar deneyin</string>
+    <string name="connect">Bağlamak</string>
+    <string name="get_start">Başlamak</string>
+    <string name="next">SONRAKİ</string>
+</resources>

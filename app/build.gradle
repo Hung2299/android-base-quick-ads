@@ -1,0 +1,210 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    id 'androidx.navigation.safeargs'
+    id 'dagger.hilt.android.plugin'
+    id 'com.google.firebase.crashlytics'
+    id 'com.google.gms.google-services'
+}
+
+android {
+    compileSdk rootProject.ext.compileSdkVersion
+
+    defaultConfig {
+        applicationId "com.base.bkplus.wifi.password"
+
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+
+        versionCode rootProject.ext.app_version_code
+        versionName rootProject.ext.app_version_name
+
+        def formattedDate = new Date().format("MM.dd.yyyy")
+        archivesBaseName = "XMasFakeCall_v${versionName}(${versionCode})_${formattedDate}"
+
+        vectorDrawables {
+            useSupportLibrary true
+        }
+    }
+
+    signingConfigs {
+        release {
+            storeFile file("key/release.jks")
+            storePassword "trustedapp@123"
+            keyAlias "release"
+            keyPassword "trustedapp@123"
+        }
+    }
+
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+    repositories {
+        mavenCentral()
+    }
+
+    buildTypes {
+        debug {
+            debuggable true
+        }
+
+        release {
+            signingConfig signingConfigs.release
+        }
+    }
+
+    flavorDimensions 'root'
+    productFlavors {
+        appDev {
+            manifestPlaceholders = [ad_app_id: '\"ca-app-pub-3940256099942544~3347511713\"']
+            buildConfigField 'String', 'Inter_Splash', '\"ca-app-pub-3940256099942544/1033173712\"'
+            buildConfigField 'String', 'Inter_Onboard', '\"ca-app-pub-3940256099942544/1033173712\"'
+            buildConfigField 'String', 'Inter_Setup', '\"ca-app-pub-3940256099942544/1033173712\"'
+            buildConfigField 'String', 'Inter_VideoCall', '\"ca-app-pub-3940256099942544/1033173712\"'
+            buildConfigField 'String', 'Inter_Chat_VideoCall', '\"ca-app-pub-3940256099942544/1033173712\"'
+
+            buildConfigField 'String', 'Native_Language', '\"ca-app-pub-3940256099942544/2247696110\"'
+            buildConfigField 'String', 'Native_Home', '\"ca-app-pub-3940256099942544/2247696110\"'
+            buildConfigField 'String', 'Native_Onboard', '\"ca-app-pub-3940256099942544/2247696110\"'
+            buildConfigField 'String', 'Native_SetupCall', '\"ca-app-pub-3940256099942544/2247696110\"'
+            buildConfigField 'String', 'Native_ChooseSanta', '\"ca-app-pub-3940256099942544/2247696110\"'
+            buildConfigField 'String', 'Native_Countdown', '\"ca-app-pub-3940256099942544/2247696110\"'
+
+            buildConfigField 'String', 'Ads_resume', '\"ca-app-pub-3940256099942544/3419835294\"'
+            buildConfigField 'String', 'Banner', '\"ca-app-pub-3940256099942544/6300978111\"'
+            buildConfigField 'Boolean', 'build_debug', 'true'
+        }
+        appProduct {
+            // ADS CONFIG BEGIN
+            manifestPlaceholders = [ad_app_id: 'ca-app-pub-3940256099942544~3347511713']
+            buildConfigField 'String', 'Inter_Splash', '\"ca-app-pub-3940256099942544/1033173712\"'
+            buildConfigField 'String', 'Inter_Onboard', '\"ca-app-pub-3940256099942544/1033173712\"'
+            buildConfigField 'String', 'Inter_Setup', '\"ca-app-pub-3940256099942544/1033173712\"'
+            buildConfigField 'String', 'Inter_VideoCall', '\"ca-app-pub-3940256099942544/1033173712\"'
+            buildConfigField 'String', 'Inter_Chat_VideoCall', '\"ca-app-pub-3940256099942544/1033173712\"'
+
+            buildConfigField 'String', 'Native_Language', '\"ca-app-pub-3940256099942544/2247696110\"'
+            buildConfigField 'String', 'Native_Home', '\"ca-app-pub-3940256099942544/2247696110\"'
+            buildConfigField 'String', 'Native_Onboard', '\"ca-app-pub-3940256099942544/2247696110\"'
+            buildConfigField 'String', 'Native_SetupCall', '\"ca-app-pub-3940256099942544/2247696110\"'
+            buildConfigField 'String', 'Native_ChooseSanta', '\"ca-app-pub-3940256099942544/2247696110\"'
+            buildConfigField 'String', 'Native_Countdown', '\"ca-app-pub-3940256099942544/2247696110\"'
+
+            buildConfigField 'String', 'Ads_resume', '\"ca-app-pub-3940256099942544/3419835294\"'
+            buildConfigField 'String', 'Banner', '\"ca-app-pub-3940256099942544/6300978111\"'
+            buildConfigField 'Boolean', 'build_debug', 'false'
+            // ADS CONFIG END
+        }
+    }
+
+    bundle {
+        language {
+            enableSplit = false
+        }
+    }
+
+    buildFeatures {
+        dataBinding true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation("com.tbuonomo:dotsindicator:4.3")
+
+    //ExoPlayer
+    implementation 'com.google.android.exoplayer:exoplayer:2.19.1'
+
+    // Kotlin
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation "androidx.core:core-ktx:$rootProject.ext.lib_versions.core_ktx"
+    implementation "androidx.fragment:fragment-ktx:$rootProject.ext.lib_versions.fragment_ktx"
+
+    // Support
+    implementation "androidx.appcompat:appcompat:$rootProject.ext.lib_versions.appcompat"
+    implementation "androidx.legacy:legacy-support-v4:$rootProject.ext.lib_versions.support"
+    implementation "androidx.cardview:cardview:$rootProject.ext.lib_versions.cardview"
+    implementation "androidx.recyclerview:recyclerview:$rootProject.ext.lib_versions.recyclerview"
+    implementation "androidx.constraintlayout:constraintlayout:$rootProject.ext.lib_versions.constraint"
+    implementation "com.jakewharton.timber:timber:5.0.1"
+
+    // Google Architecture Component
+    implementation "androidx.lifecycle:lifecycle-extensions:$rootProject.ext.lib_versions.arch"
+    implementation "androidx.lifecycle:lifecycle-common-java8:2.6.2"
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.1'
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2"
+
+    // Navigation Component
+    implementation "android.arch.navigation:navigation-fragment-ktx:$rootProject.ext.lib_versions.nav"
+    implementation "android.arch.navigation:navigation-ui-ktx:$rootProject.ext.lib_versions.nav"
+
+    // Room
+    implementation "androidx.room:room-runtime:$rootProject.ext.lib_versions.room"
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.5.3'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.5.3'
+    kapt "androidx.room:room-compiler:$rootProject.ext.lib_versions.room"
+    implementation "androidx.room:room-ktx:$rootProject.ext.lib_versions.room"
+
+    // Hilt dependencies
+    implementation "com.google.dagger:hilt-android:$hilt_version"
+    kapt "com.google.dagger:hilt-android-compiler:$hilt_version"
+    // Hilt ViewModel extension
+    kapt "androidx.hilt:hilt-compiler:$rootProject.ext.lib_versions.hilt_jetpack"
+
+    // API
+    implementation "com.squareup.okhttp3:okhttp:$rootProject.ext.lib_versions.okhttp"
+    implementation "com.squareup.okhttp3:logging-interceptor:$rootProject.ext.lib_versions.okhttp"
+    implementation "com.squareup.retrofit2:retrofit:$rootProject.ext.lib_versions.retrofit"
+    implementation "com.squareup.retrofit2:converter-moshi:$rootProject.ext.lib_versions.retrofit"
+    implementation "com.squareup.moshi:moshi-adapters:$rootProject.ext.lib_versions.moshi"
+    implementation "com.squareup.moshi:moshi-kotlin:$rootProject.ext.lib_versions.moshi"
+    implementation 'com.google.code.gson:gson:2.9.1'
+    implementation "com.squareup.retrofit2:converter-gson:2.9.0"
+
+    debugImplementation "androidx.multidex:multidex:$rootProject.ext.lib_versions.multidex"
+
+    //UI
+    implementation "com.github.bumptech.glide:glide:$rootProject.ext.lib_versions.glide"
+    kapt "com.github.bumptech.glide:compiler:$rootProject.ext.lib_versions.glide"
+
+    implementation "com.google.guava:guava:31.0.1-android"
+    //firebase
+    implementation platform('com.google.firebase:firebase-bom:31.1.1')
+
+    implementation 'com.google.firebase:firebase-config-ktx'
+    implementation 'com.google.firebase:firebase-analytics-ktx'
+    implementation 'com.google.firebase:firebase-messaging-ktx:23.2.1'
+    apply plugin: 'com.google.gms.google-services'
+    implementation 'com.google.firebase:firebase-crashlytics-ktx:18.6.0'
+
+    implementation 'com.facebook.shimmer:shimmer:0.5.0'
+    implementation 'com.google.android.gms:play-services-ads-identifier:18.0.1'
+    implementation 'com.google.android.gms:play-services-ads:22.5.0'
+
+    implementation 'com.romandanylyk:pageindicatorview:1.0.3'
+    implementation 'com.google.android.material:material:1.9.0'
+
+    implementation 'com.xwray:groupie:2.8.1'
+    implementation 'com.xwray:groupie-viewbinding:2.8.1'
+
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+    implementation 'jp.wasabeef:glide-transformations:4.0.0'
+    implementation 'joda-time:joda-time:2.12.5'
+
+    //Ads
+    implementation 'apero-global:apero-ads:1.0.4'
+
+    implementation 'androidx.preference:preference-ktx:1.2.1'
+    implementation "com.airbnb.android:lottie:6.1.0"
+}

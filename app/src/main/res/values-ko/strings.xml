@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="back_pressed_finish">다시 눌러 종료하십시오</string>
+    <string name="setting_language">언어</string>
+    <string name="setting_policy">개인 정보 정책</string>
+    <string name="setting_en">영어</string>
+    <string name="setting_vi">베트남어</string>
+    <string name="setting_it">이탈리아 사람</string>
+    <string name="setting_spain">스페인의</string>
+    <string name="setting_hindi">힌디 어</string>
+    <string name="terms_of_use">이용 약관</string>
+    <string name="setting">설정</string>
+    <string name="language">언어</string>
+    <string name="version">버전</string>
+    <string name="rate_application">앱 평가</string>
+    <string name="share">앱 공유</string>
+    <string name="loading_ads">광고로드…</string>
+    <string name="title_rate">앱이 마음에 드십니까?</string>
+    <string name="desc_rate">당신의 경험을 알려주십시오 \ n 5 Stars는 Google Play에서 최고입니다!</string>
+    <string name="rate_us">우리를 평가하십시오</string>
+    <string name="your_friend">\"네 친구 \"</string>
+    <string name="visit_app">\ "앱을 확인하기를 원합니다!. at : \"를 방문하십시오.</string>
+    <string name="choose_way_share">공유 방법을 선택하십시오.</string>
+    <string name="feedback">피드백</string>
+    <string name="settings">설정</string>
+    <string name="history">역사</string>
+    <string name="setting_pt">포르투갈 인</string>
+    <string name="setting_de">독일 사람</string>
+    <string name="setting_fr">프랑스 국민</string>
+
+    <string name="setting_china">중국</string>
+    <string name="setting_russian">러시아인</string>
+    <string name="setting_bengal">벵골</string>
+    <string name="setting_japan">일본</string>
+    <string name="setting_marathi">마라 티</string>
+    <string name="setting_telugu">텔루구 어</string>
+    <string name="setting_turkish">터키</string>
+    <string name="setting_tamil">타밀 사람</string>
+    <string name="setting_korea">한국</string>
+    <string name="setting_italian">이탈리아 사람</string>
+    <string name="setting_thailand">태국</string>
+
+    <string name="no_internet_description">연결 오류가 있습니다. \ nyour 인터넷을 확인하고 다시 시도하십시오.</string>
+    <string name="connect">연결하다</string>
+    <string name="get_start">시작하십시오</string>
+    <string name="next">다음</string>
+</resources>

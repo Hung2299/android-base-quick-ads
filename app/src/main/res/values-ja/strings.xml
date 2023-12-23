@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="back_pressed_finish">もう一度再び押して終了してください</string>
+    <string name="setting_language">言語</string>
+    <string name="setting_policy">プライバシーポリシー</string>
+    <string name="setting_en">英語</string>
+    <string name="setting_vi">ベトナム人</string>
+    <string name="setting_it">イタリアの</string>
+    <string name="setting_spain">スペイン語</string>
+    <string name="setting_hindi">ヒンディー語</string>
+    <string name="terms_of_use">利用規約</string>
+    <string name="setting">設定</string>
+    <string name="language">言語</string>
+    <string name="version">バージョン</string>
+    <string name="rate_application">アプリを評価</string>
+    <string name="share">アプリを共有します</string>
+    <string name="loading_ads">広告の読み込み…</string>
+    <string name="title_rate">あなたはアプリが好きですか？</string>
+    <string name="desc_rate">あなたの経験を教えてください\ n 5つ星がGoogle Playで最高です！</string>
+    <string name="rate_us">私たちを評価してください</string>
+    <string name="your_friend">\"あなたの友達 \"</string>
+    <string name="visit_app">\ "アプリをチェックしてほしい！</string>
+    <string name="choose_way_share">共有する方法を選択してください：</string>
+    <string name="feedback">フィードバック</string>
+    <string name="settings">設定</string>
+    <string name="history">歴史</string>
+    <string name="setting_pt">ポルトガル語</string>
+    <string name="setting_de">ドイツ人</string>
+    <string name="setting_fr">フランス語</string>
+
+    <string name="setting_china">中国</string>
+    <string name="setting_russian">ロシア</string>
+    <string name="setting_bengal">ベンガル</string>
+    <string name="setting_japan">日本</string>
+    <string name="setting_marathi">マラーティー</string>
+    <string name="setting_telugu">テルグ語</string>
+    <string name="setting_turkish">トルコ語</string>
+    <string name="setting_tamil">タミル語</string>
+    <string name="setting_korea">韓国</string>
+    <string name="setting_italian">イタリアの</string>
+    <string name="setting_thailand">タイ</string>
+
+    <string name="no_internet_description">接続エラーがあります。インターネットをチェックして再試行してください</string>
+    <string name="connect">接続</string>
+    <string name="get_start">スタートを切る</string>
+    <string name="next">次</string>
+</resources>

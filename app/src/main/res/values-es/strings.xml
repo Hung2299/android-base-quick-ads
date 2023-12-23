@@ -1,0 +1,46 @@
+<resources>
+    <string name="back_pressed_finish">Presione de nuevo para dejar de fumar</string>
+    <string name="setting_language">Lenguas</string>
+    <string name="setting_policy">política de privacidad</string>
+    <string name="setting_en">Inglés</string>
+    <string name="setting_vi">vietnamita</string>
+    <string name="setting_it">italiano</string>
+    <string name="setting_spain">Español</string>
+    <string name="setting_hindi">hindi</string>
+    <string name="terms_of_use">Condiciones de uso</string>
+    <string name="setting">Ajustes</string>
+    <string name="language">Idioma</string>
+    <string name="version">Versión</string>
+    <string name="rate_application">Calificar aplicacion</string>
+    <string name="share">Compartir aplicación</string>
+    <string name="loading_ads">Cargando anuncios ...</string>
+    <string name="title_rate">¿Te gusta la aplicación?</string>
+    <string name="desc_rate">¡Háganos saber que su experiencia \ n 5 estrellas es la mejor en Google Play!</string>
+    <string name="rate_us">Nos califica</string>
+    <string name="your_friend">\"Tu amigo \"</string>
+    <string name="visit_app">\ "¡Quiere que revises nuestra aplicación!. Visítenos en: \"</string>
+    <string name="choose_way_share">Elija una forma de compartir:</string>
+    <string name="feedback">Comentario</string>
+    <string name="settings">Ajustes</string>
+    <string name="history">Historia</string>
+    <string name="setting_pt">portugués</string>
+    <string name="setting_de">Alemán</string>
+    <string name="setting_fr">Francés</string>
+
+    <string name="setting_china">Porcelana</string>
+    <string name="setting_russian">ruso</string>
+    <string name="setting_bengal">Bengala</string>
+    <string name="setting_japan">Japón</string>
+    <string name="setting_marathi">Marathi</string>
+    <string name="setting_telugu">Telugu</string>
+    <string name="setting_turkish">turco</string>
+    <string name="setting_tamil">Tamil</string>
+    <string name="setting_korea">Corea</string>
+    <string name="setting_italian">italiano</string>
+    <string name="setting_thailand">Tailandia</string>
+
+    <string name="no_internet_description">Hay un error de conexión, verifique \ nyour Internet e intente nuevamente</string>
+    <string name="connect">Conectar</string>
+    <string name="get_start">VAMOS A COMENZAR</string>
+    <string name="next">PRÓXIMO</string>
+</resources>
