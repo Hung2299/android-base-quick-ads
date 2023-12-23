@@ -119,11 +119,11 @@ class BaseApplication : Application() {
     /** Setup Timber Log*/
     private fun setupTimber() {
         if (BuildConfig.DEBUG) {
-            val logDebugTree = MyDebugTree(this, true)
+            val logDebugTree = MyDebugTree(this, false)
             logDebugTree.deleteFileLogFolder(this)
             Timber.plant(logDebugTree)
         } else {
-            Timber.plant(CrashlyticsTree())
+//            Timber.plant(CrashlyticsTree())
         }
     }
 }

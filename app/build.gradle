@@ -203,7 +203,8 @@ dependencies {
     implementation 'joda-time:joda-time:2.12.5'
 
     //Ads
-    implementation 'apero-global:apero-ads:1.0.4'
+//    implementation 'apero-global:apero-ads:1.0.4'
+    implementation 'apero-inhouse:apero-ads:1.10.0-snapshot18'
 
     implementation 'androidx.preference:preference-ktx:1.2.1'
     implementation "com.airbnb.android:lottie:6.1.0"
