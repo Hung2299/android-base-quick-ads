@@ -2,12 +2,14 @@ package com.harison.core.app.ui.main
 
 import android.Manifest
 import android.content.Context
+import android.content.res.AssetManager
 import android.net.ConnectivityManager
 import android.net.Network
 import android.os.Build
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.activity.viewModels
 import androidx.core.content.ContextCompat
 import androidx.core.content.PermissionChecker
 import androidx.core.view.WindowCompat
@@ -19,9 +21,12 @@ import com.harison.core.app.R
 import com.harison.core.app.databinding.ActivityMainBinding
 import com.harison.core.app.platform.BaseActivity
 import com.harison.core.app.utils.AppManager
+import com.harison.core.app.utils.extensions.readAssetsFile
 import dagger.hilt.android.AndroidEntryPoint
-import javax.inject.Inject
 import timber.log.Timber
+import java.io.IOException
+import java.io.InputStream
+import javax.inject.Inject
 
 @AndroidEntryPoint
 class MainActivity : BaseActivity<ActivityMainBinding>() {
@@ -31,6 +36,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
     private var connectivityManager: ConnectivityManager? = null
     private var networkCallback: ConnectivityManager.NetworkCallback? = null
     private var navController: NavController? = null
+    private val viewModel: MainViewModel by viewModels()
     override val layoutId: Int
         get() = R.layout.activity_main
 
@@ -61,6 +67,10 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        val string = assets.readAssetsFile("data.json")
+        Timber.d("----" , string)
+        viewModel.parseJSON(string)
+
         connectivityManager =
             getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
         val navHostFragment =

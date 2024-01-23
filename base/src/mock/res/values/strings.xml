@@ -1,6 +1,5 @@
 <resources>
 
-    <string name="app_name">Mock Base dev</string>
 
     <!-- URL/API -->
     <string name="api_end_point">http://bkplus.tech:9090</string>
