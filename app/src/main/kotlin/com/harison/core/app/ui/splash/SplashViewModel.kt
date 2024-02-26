@@ -13,7 +13,7 @@ class SplashViewModel @Inject constructor() : ViewModel() {
 
     init {
         viewModelScope.launch {
-            delay(5000L)
+            delay(4000L)
             finishCountDown.invoke()
         }
     }

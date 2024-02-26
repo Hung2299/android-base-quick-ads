@@ -4,20 +4,21 @@ import android.media.AudioAttributes
 import android.media.MediaPlayer
 import android.os.Bundle
 import android.widget.Toast
+import androidx.core.view.get
 import androidx.fragment.app.activityViewModels
-import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import com.harison.core.app.R
 import com.harison.core.app.databinding.FragmentHomeBinding
 import com.harison.core.app.domain.ItemSound
 import com.harison.core.app.platform.BaseFragment
 import com.harison.core.app.ui.main.MainViewModel
 import com.harison.core.app.ui.main.ui.home.recyclerview.SoundAdapter
+import com.harison.core.app.utils.setOnSingleClickListener
 import dagger.hilt.android.AndroidEntryPoint
 import timber.log.Timber
 
 @AndroidEntryPoint
 class HomeFragment : BaseFragment<FragmentHomeBinding>() {
-    private val viewModel: HomeViewModel by viewModels()
     private val shareViewModel: MainViewModel by activityViewModels()
     private lateinit var adapter: SoundAdapter
     private lateinit var mediaPlayer: MediaPlayer
@@ -61,11 +62,27 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
         }
     }
 
+    @Suppress("DEPRECATION")
     override fun setupListener() {
         adapter.onClickItem = { item ->
             Timber.tag("----").d("Click Item")
             playSound(item.soundUrl)
         }
+        binding.apply {
+            bottomNav.setOnNavigationItemSelectedListener {
+                when (it.itemId) {
+                    R.id.settingFragment -> {
+                        findNavController().navigate(R.id.settingFragment)
+                        return@setOnNavigationItemSelectedListener true
+                    }
+                }
+                return@setOnNavigationItemSelectedListener false
+            }
+        }
+    }
+    override fun onResume() {
+        super.onResume()
+        binding.bottomNav.menu.getItem(0).isChecked = true
     }
 
     private fun playSound(url: String) {

@@ -22,12 +22,13 @@ abstract class BaseFragment<T : ViewDataBinding> : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = DataBindingUtil.inflate(inflater, layoutId, container, false)
+        Timber.tag("onCreateView:").d(this.javaClass.simpleName)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        Timber.tag("onCreate:").d(this.javaClass.simpleName)
+        Timber.tag("onViewCreated:").d(this.javaClass.simpleName)
         setupData()
         setupUI()
         setupListener()

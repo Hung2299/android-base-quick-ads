@@ -1,10 +1,6 @@
 package com.harison.core.app.ui.main
 
 import android.Manifest
-import android.content.Context
-import android.content.res.AssetManager
-import android.net.ConnectivityManager
-import android.net.Network
 import android.os.Build
 import android.os.Bundle
 import android.widget.Toast
@@ -15,8 +11,10 @@ import androidx.core.content.PermissionChecker
 import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
+import androidx.core.view.isVisible
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.setupWithNavController
 import com.harison.core.app.R
 import com.harison.core.app.databinding.ActivityMainBinding
 import com.harison.core.app.platform.BaseActivity
@@ -24,8 +22,6 @@ import com.harison.core.app.utils.AppManager
 import com.harison.core.app.utils.extensions.readAssetsFile
 import dagger.hilt.android.AndroidEntryPoint
 import timber.log.Timber
-import java.io.IOException
-import java.io.InputStream
 import javax.inject.Inject
 
 @AndroidEntryPoint
@@ -33,8 +29,6 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
 
     @Inject
     lateinit var appManager: AppManager
-    private var connectivityManager: ConnectivityManager? = null
-    private var networkCallback: ConnectivityManager.NetworkCallback? = null
     private var navController: NavController? = null
     private val viewModel: MainViewModel by viewModels()
     override val layoutId: Int
@@ -68,26 +62,13 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val string = assets.readAssetsFile("data.json")
-        Timber.d("----" , string)
+        Timber.d("----", string)
         viewModel.parseJSON(string)
 
-        connectivityManager =
-            getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
         val navHostFragment =
             supportFragmentManager.findFragmentById(R.id.nav_host_main_fragment) as NavHostFragment
         navController = navHostFragment.navController
-        listenForNetworkState()
-        checkNetworkState()
         requestPermissionAndroid13()
-    }
-
-    private fun checkNetworkState() {
-        val networkInfo = connectivityManager?.activeNetworkInfo
-        if (networkInfo == null || !networkInfo.isConnected) {
-            runOnUiThread {
-                navController?.navigate(R.id.noInternetFragment)
-            }
-        }
     }
 
     override fun onBackPressed() {
@@ -129,24 +110,5 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
             controller.systemBarsBehavior =
                 WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
         }
-    }
-
-    private fun listenForNetworkState() {
-        networkCallback = object : ConnectivityManager.NetworkCallback() {
-            override fun onAvailable(network: Network) {
-                runOnUiThread {
-                    if (navController?.currentDestination?.id == R.id.noInternetFragment) {
-                        navController?.popBackStack()
-                    }
-                }
-            }
-
-            override fun onLost(network: Network) {
-                runOnUiThread {
-                    navController?.navigate(R.id.noInternetFragment)
-                }
-            }
-        }
-        connectivityManager?.registerDefaultNetworkCallback(networkCallback as ConnectivityManager.NetworkCallback)
     }
 }

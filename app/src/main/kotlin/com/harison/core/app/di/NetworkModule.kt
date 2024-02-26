@@ -1,13 +1,16 @@
 package com.harison.core.app.di
 
+import android.content.Context
 import android.util.Log
 import com.harison.core.app.api.ApiService
 import com.harison.core.app.api.calladapter.NetworkResultCallAdapterFactory
 import com.harison.core.app.utils.Constants.BASE_URL
 import com.harison.core.app.utils.Constants.TIME_OUT
+import com.harison.core.app.utils.NetworkState
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
+import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import java.util.concurrent.TimeUnit
 import javax.inject.Singleton
@@ -57,4 +60,9 @@ object NetworkModule {
     fun provideAuthService(retrofit: Retrofit): ApiService {
         return retrofit.create(ApiService::class.java)
     }
+    @Provides
+    @Singleton
+    fun provideNetworkState(@ApplicationContext appContext: Context): NetworkState = NetworkState(
+        appContext
+    )
 }

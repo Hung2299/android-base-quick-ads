@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.core.content.ContextCompat.getColor
 import androidx.navigation.Navigation
+import androidx.navigation.fragment.findNavController
 import com.ads.control.admob.AppOpenManager
 import com.ads.control.ads.AperoAd
 import com.harison.core.app.BuildConfig
@@ -108,21 +109,11 @@ class SettingFragment : BaseFragment<FragmentSettingBinding>() {
         }
 
         binding.icBack.setOnClickListener {
-            activity?.let {
-                val navController = Navigation.findNavController(
-                    it, R.id.nav_host_main_fragment
-                )
-                navController.popBackStack()
-            }
+            findNavController().popBackStack(R.id.homeFragment,false)
         }
 
         binding.containerLanguage.setOnClickListener {
-            activity?.let {
-                val navController = Navigation.findNavController(
-                    it, R.id.nav_host_main_fragment
-                )
-                navController.navigate(R.id.languageFragment)
-            }
+            findNavController().navigate(R.id.languageFragment)
         }
     }
 

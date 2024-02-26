@@ -2,6 +2,8 @@ package com.harison.core.app.ui.splash.ui.onboarding
 
 import android.os.Bundle
 import android.view.View
+import androidx.fragment.app.viewModels
+import androidx.navigation.NavOptions
 import androidx.navigation.fragment.findNavController
 import androidx.viewpager2.widget.ViewPager2
 import com.ads.control.admob.Admob
@@ -15,6 +17,7 @@ import com.harison.core.app.R
 import com.harison.core.app.databinding.FragmentOnboardingBinding
 import com.harison.core.app.platform.BaseFragment
 import com.harison.core.app.ui.splash.ui.onboarding.screen.OnboardFirstFragment
+import com.harison.core.app.ui.splash.ui.onboarding.screen.OnboardFourFragment
 import com.harison.core.app.ui.splash.ui.onboarding.screen.OnboardSecondFragment
 import com.harison.core.app.ui.splash.ui.onboarding.screen.OnboardThirdFragment
 import com.harison.core.app.ui.splash.ui.onboarding.screen.ViewPagerAdapter
@@ -28,25 +31,31 @@ class OnboardingFragment : BaseFragment<FragmentOnboardingBinding>() {
     private var native: ApNativeAd? = null
     private var mInterOnboard: ApInterstitialAd? = null
 
+    private val viewModel: OnboardingViewModel by viewModels()
+
     override val layoutId: Int
         get() = R.layout.fragment_onboarding
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        viewModel.test()
         val fragmentList = arrayListOf(
-            OnboardFirstFragment(), OnboardSecondFragment(), OnboardThirdFragment()
+            OnboardFirstFragment(),
+            OnboardSecondFragment(),
+            OnboardThirdFragment(),
+            OnboardFourFragment()
         )
         val adapter = ViewPagerAdapter(
-            fragmentList, requireActivity().supportFragmentManager, lifecycle
+            fragmentList, childFragmentManager, lifecycle
         )
         binding.viewpagerOnboard.adapter = adapter
-        binding.viewpagerOnboard.offscreenPageLimit = 3
+        binding.viewpagerOnboard.offscreenPageLimit = 4
         binding.viewpagerOnboard.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
             override fun onPageSelected(position: Int) {
                 super.onPageSelected(position)
-                if (position == 2){
+                if (position == 3) {
                     binding.continueButton.setText(R.string.get_start)
-                }else{
+                } else {
                     binding.continueButton.setText(R.string.next)
                 }
             }
@@ -74,7 +83,7 @@ class OnboardingFragment : BaseFragment<FragmentOnboardingBinding>() {
         super.setupListener()
 
         binding.continueButton.setOnClickListener {
-            if (binding.viewpagerOnboard.currentItem < 2) {
+            if (binding.viewpagerOnboard.currentItem < 3) {
                 binding.viewpagerOnboard.currentItem =
                     binding.viewpagerOnboard.currentItem + 1
             } else {
@@ -130,7 +139,7 @@ class OnboardingFragment : BaseFragment<FragmentOnboardingBinding>() {
 
     private fun onGotoMain() {
         BasePrefers.getPrefsInstance().openboard = true
-        findNavController().navigate(R.id.homeFragment)
+        findNavController().navigate(OnboardingFragmentDirections.actionOnboardingFragmentToHomeFragment())
     }
 
     private fun loadNativeOnboard() {

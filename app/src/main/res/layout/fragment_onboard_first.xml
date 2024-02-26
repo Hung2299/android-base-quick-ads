@@ -5,15 +5,16 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#FFFFFF"
+        android:background="#1E1E1E"
         android:orientation="vertical">
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/img_first"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
             android:layout_weight="1"
-            android:scaleType="fitXY" />
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ob1" />
 
         <TextView
             android:id="@+id/text_onboard_frist"
@@ -23,24 +24,97 @@
             android:layout_marginTop="16dp"
             android:fontFamily="@font/calibri"
             android:maxLines="1"
-            android:textColor="#0E0D35"
+            android:text="@string/explore_funny"
             android:textSize="22sp"
+            android:textColor="@color/white"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@id/desc_onboard_1"
             app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
+            android:text="@string/_1000_fun_and_dynamic_sound_for_your_device_choose_a_popular_sound_category"
             android:id="@+id/desc_onboard_1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="16dp"
             android:layout_marginTop="8dp"
-            android:layout_marginBottom="32dp"
             android:fontFamily="@font/figtree_regular"
             android:lineHeight="18dp"
-            android:textColor="#6E6E86"
+            android:textColor="@color/white"
             android:textFontWeight="400"
             android:textSize="12sp" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
+                android:id="@+id/IndicatorViewBanner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:visibility="invisible"
+                app:dampingRatio="0.5"
+                app:dotsColor="#828282"
+                app:dotsCornerRadius="16dp"
+                app:dotsSize="8dp"
+                app:dotsSpacing="4dp"
+                app:dotsStrokeWidth="2dp"
+                app:dotsWidthFactor="2.5"
+                app:layout_constraintBottom_toBottomOf="@+id/continue_button"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/continue_button"
+                app:selectedDotColor="#0CE491"
+                app:stiffness="300" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/continue_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="4dp"
+                android:fontFamily="@font/calibri"
+                android:lineHeight="24dp"
+                android:text="@string/next"
+                android:textColor="#0CE491"
+                android:textFontWeight="700"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toTopOf="@+id/fr_native_ads_activity"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/fr_native_ads_activity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginHorizontal="8dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <FrameLayout
+                    android:id="@+id/fl_adplaceholder_activity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone" />
+
+                <com.facebook.shimmer.ShimmerFrameLayout
+                    android:id="@+id/shimmer_container_native_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:shimmer_auto_start="true"
+                    app:shimmer_base_color="#333333">
+
+                    <include layout="@layout/native_onboarding_ads" />
+
+                </com.facebook.shimmer.ShimmerFrameLayout>
+
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </LinearLayout>
 </layout>
