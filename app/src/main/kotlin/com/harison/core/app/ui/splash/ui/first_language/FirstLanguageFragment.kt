@@ -51,11 +51,11 @@ class FirstLanguageFragment : BaseFragment<FragmentFirstLanguageBinding>(),
             requireContext { layoutManager = LinearLayoutManager(it, RecyclerView.VERTICAL, false) }
             adapter = groupLanguage
         }
-        if (BasePrefers.getPrefsInstance().nativeLanguage && isShowNativeLanguage()) {
-            loadNativeFirstLanguage()
-        } else {
+//        if (BasePrefers.getPrefsInstance().nativeLanguage && isShowNativeLanguage()) {
+//            loadNativeFirstLanguage()
+//        } else {
             binding.frNativeAdsActivity.visibility = View.GONE
-        }
+//        }
         binding.settingLanguageToolbar.setGradientBackground(
             R.color.start_blue_gradient,
             R.color.end_blue_gradient

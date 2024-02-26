@@ -17,8 +17,8 @@ android {
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
 
-        versionCode rootProject.ext.app_version_code
-        versionName rootProject.ext.app_version_name
+        versionCode 2
+        versionName "1.0.1"
 
         def formattedDate = new Date().format("MM.dd.yyyy")
         archivesBaseName = "Meme_sound_v${versionName}(${versionCode})_${formattedDate}"

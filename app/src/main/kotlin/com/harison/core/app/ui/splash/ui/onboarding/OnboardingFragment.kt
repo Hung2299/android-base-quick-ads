@@ -72,11 +72,11 @@ class OnboardingFragment : BaseFragment<FragmentOnboardingBinding>() {
 
     private fun setupNativeOnboard() {
 
-        if (BasePrefers.getPrefsInstance().nativeOnboard) {
-            loadNativeOnboard()
-        } else {
+//        if (BasePrefers.getPrefsInstance().nativeOnboard) {
+//            loadNativeOnboard()
+//        } else {
             binding.frNativeAdsActivity.visibility = View.INVISIBLE
-        }
+//        }
     }
 
     override fun setupListener() {
@@ -87,21 +87,21 @@ class OnboardingFragment : BaseFragment<FragmentOnboardingBinding>() {
                 binding.viewpagerOnboard.currentItem =
                     binding.viewpagerOnboard.currentItem + 1
             } else {
-                if (BasePrefers.getPrefsInstance().interOnboard) {
-                    activity?.let {
-                        Admob.getInstance().setOpenActivityAfterShowInterAds(true)
-                        AperoAd.getInstance().forceShowInterstitial(
-                            it, mInterOnboard, object : AperoAdCallback() {
-                                override fun onNextAction() {
-                                    super.onNextAction()
-                                    onGotoMain()
-                                }
-                            }, true
-                        )
-                    }
-                } else {
+//                if (BasePrefers.getPrefsInstance().interOnboard) {
+//                    activity?.let {
+//                        Admob.getInstance().setOpenActivityAfterShowInterAds(true)
+//                        AperoAd.getInstance().forceShowInterstitial(
+//                            it, mInterOnboard, object : AperoAdCallback() {
+//                                override fun onNextAction() {
+//                                    super.onNextAction()
+//                                    onGotoMain()
+//                                }
+//                            }, true
+//                        )
+//                    }
+//                } else {
                     onGotoMain()
-                }
+//                }
             }
         }
     }
@@ -122,7 +122,7 @@ class OnboardingFragment : BaseFragment<FragmentOnboardingBinding>() {
 
     override fun onStart() {
         super.onStart()
-        loadInterOnboard()
+//        loadInterOnboard()
     }
 
     private fun loadInterOnboard() {

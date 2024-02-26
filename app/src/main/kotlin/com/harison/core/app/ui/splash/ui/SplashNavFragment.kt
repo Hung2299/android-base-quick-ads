@@ -30,11 +30,11 @@ class SplashNavFragment : BaseFragment<FragmentSplashNavBinding>() {
         anim.duration = 4000L
         binding.progressBar.startAnimation(anim)
         viewModel.finishCountDown = {
-            if (BasePrefers.getPrefsInstance().interSplash) {
-                loadAndShowInterAds()
-            } else {
+//            if (BasePrefers.getPrefsInstance().interSplash) {
+//                loadAndShowInterAds()
+//            } else {
                 navigateNextScreen()
-            }
+//            }
         }
     }
 
