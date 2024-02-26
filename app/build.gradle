@@ -12,7 +12,7 @@ android {
     compileSdk rootProject.ext.compileSdkVersion
 
     defaultConfig {
-        applicationId "com.base.bkplus.wifi.password"
+        applicationId "com.sound.meme.fun.maga"
 
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
@@ -21,7 +21,7 @@ android {
         versionName rootProject.ext.app_version_name
 
         def formattedDate = new Date().format("MM.dd.yyyy")
-        archivesBaseName = "XMasFakeCall_v${versionName}(${versionCode})_${formattedDate}"
+        archivesBaseName = "Meme_sound_v${versionName}(${versionCode})_${formattedDate}"
 
         vectorDrawables {
             useSupportLibrary true
@@ -30,10 +30,10 @@ android {
 
     signingConfigs {
         release {
-            storeFile file("key/release.jks")
-            storePassword "trustedapp@123"
-            keyAlias "release"
-            keyPassword "trustedapp@123"
+            storeFile file("key/harrisonKey")
+            storePassword "viethung"
+            keyAlias "meme"
+            keyPassword "viethung"
         }
     }
 

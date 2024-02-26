@@ -29,7 +29,7 @@ class BaseApplication : Application() {
 
         BasePrefers.initPrefs(applicationContext)
         initRemoteConfig()
-        initAds()
+//        initAds()
         fetchRemoteConfig()
         setupTimber()
     }
@@ -113,7 +113,7 @@ class BaseApplication : Application() {
 
         aperoAdConfig?.idAdResume = BuildConfig.Ads_resume
 
-        AperoAd.getInstance().init(this, aperoAdConfig, false)
+//        AperoAd.getInstance().init(this, aperoAdConfig, false)
     }
 
     /** Setup Timber Log*/
